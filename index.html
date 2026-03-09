@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femei Remarcabile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --header-bg: #020617;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: var(--header-bg);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(35px, 7vw, 60px);
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .section {
+            padding: 60px 10%;
+        }
+
+        .section h2 {
+            font-size: 40px;
+            margin-bottom: 60px;
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            opacity: 0.9;
+        }
+
+        .person {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 100px;
+            transition: 0.5s;
+        }
+
+        .person:nth-child(even) {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        .image-box {
+            position: relative;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .quote-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 25px;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+            backdrop-filter: blur(4px);
+        }
+
+        .image-box:hover .quote-overlay {
+            opacity: 1;
+        }
+
+        .quote-overlay p {
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #f1f5f9;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h3 {
+            font-size: 32px;
+            margin: 0 0 15px 0;
+            font-family: 'Playfair Display', serif;
+            color: #f8fafc;
+        }
+
+        .info p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #cbd5e1;
+            margin: 0;
+        }
+
+        .science { background: #0f172a; }
+        .art { background: #1e1b4b; }
+        .literature { background: #450a0a; }
+        .activism { background: #064e3b; }
+        .history { background: #451a03; }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            background: #020617;
+            border-top: 1px solid #1e293b;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 15px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 900px) {
+            .person, .person:nth-child(even) {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            .image-box {
+                width: 100%;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Femei remarcabile ale lumii</h1>
+    <p>Modele de excelență și viziune</p>
+</header>
+
+<div class="section science">
+    <h2>Științe</h2>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Marie_Curie_%281900%29_%28cropped%29.jpg">
+            <div class="quote-overlay"><p>"Nothing in life is to be feared, it is only to be understood."</p></div>
+        </div>
+        <div class="info">
+            <h3>Marie Curie</h3>
+            <p>Fizician și chimist polonez. Este prima persoană care a câștigat două premii Nobel în domenii diferite, descoperind elementele radiu și poloniu.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Ada_Lovelace_portrait.jpg">
+            <div class="quote-overlay"><p>"Imagination is the discovering faculty."</p></div>
+        </div>
+        <div class="info">
+            <h3>Ada Lovelace</h3>
+            <p>Matematiciană britanică, celebră pentru munca sa la motorul analitic al lui Babbage. Este considerată primul programator din istorie.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Rosalind_Franklin_%28retouched%29.jpg">
+            <div class="quote-overlay"><p>"Science and everyday life cannot be separated."</p></div>
+        </div>
+        <div class="info">
+            <h3>Rosalind Franklin</h3>
+            <p>Chimistă britanică a cărei muncă a fost crucială pentru înțelegerea structurilor moleculare ale ADN-ului și ARN-ului.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section art">
+    <h2>Arte</h2>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Frida_Kahlo%2C_by_Guillermo_Kahlo.jpg">
+            <div class="quote-overlay"><p>"I paint flowers so they will not die."</p></div>
+        </div>
+        <div class="info">
+            <h3>Frida Kahlo</h3>
+            <p>Pictoriță mexicană cunoscută pentru autoportretele sale vibrante ce explorează teme precum identitatea, suferința și corpul uman.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/AudreyKHepburn.jpg">
+            <div class="quote-overlay"><p>"Nothing is impossible."</p></div>
+        </div>
+        <div class="info">
+            <h3>Audrey Hepburn</h3>
+            <p>Actriță legendară și simbol al eleganței. Și-a dedicat ultima parte a vieții muncii umanitare ca ambasador UNICEF.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Coco_Chanel_in_Los_Angeles%2C_1931_%28cropped%29.jpg">
+            <div class="quote-overlay"><p>"Beauty begins the moment you decide to be yourself."</p></div>
+        </div>
+        <div class="info">
+            <h3>Coco Chanel</h3>
+            <p>Designer de modă care a revoluționat stilul feminin, eliminând corsetele și impunând eleganța simplă și confortabilă.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section literature">
+    <h2>Literatură</h2>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/CassandraAusten-JaneAusten%28c.1810%29_hires.jpg/960px-CassandraAusten-JaneAusten%28c.1810%29_hires.jpg">
+            <div class="quote-overlay"><p>"There is no charm equal to tenderness of heart."</p></div>
+        </div>
+        <div class="info">
+            <h3>Jane Austen</h3>
+            <p>Scriitoare engleză celebră pentru romanele sale care analizează cu finețe și umor viața socială a micii nobilimi britanice.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Portrait_photograph_of_Maya_Angelou_with_a_copy_of_I_Know_Why_the_Caged_Bird_Sings_in_Los_Angeles%2C_November_3%2C_1971.jpg">
+            <div class="quote-overlay"><p>"Try to be a rainbow in someone's cloud."</p></div>
+        </div>
+        <div class="info">
+            <h3>Maya Angelou</h3>
+            <p>Poetă, scriitoare și activistă americană, voce marcantă în lupta pentru drepturile civile și demnitatea umană.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Agatha_Christie_in_Nederland_%28detectiveschrijfster%29%2C_bij_aankomst_op_Schiphol_me%2C_Bestanddeelnr_916-8898_%28cropped%29.jpg/960px-Agatha_Christie_in_Nederland_%28detectiveschrijfster%29%2C_bij_aankomst_op_Schiphol_me%2C_Bestanddeelnr_916-8898_%28cropped%29.jpg">
+            <div class="quote-overlay"><p>"The secret of getting ahead is getting started."</p></div>
+        </div>
+        <div class="info">
+            <h3>Agatha Christie</h3>
+            <p>Cea mai vândută scriitoare de romane polițiste din lume, creatoarea personajelor celebre Hercule Poirot și Miss Marple.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section activism">
+    <h2>Activism</h2>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Malala_Yousafzai_2023_portrait_2x3.jpg">
+            <div class="quote-overlay"><p>"One child, one teacher, one book can change the world."</p></div>
+        </div>
+        <div class="info">
+            <h3>Malala Yousafzai</h3>
+            <p>Luptătoare pentru dreptul fetelor la educație și cea mai tânără laureată a Premiului Nobel pentru Pace.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Rosa_Parks_1997.jpg">
+            <div class="quote-overlay"><p>"You must never be fearful about what you are doing."</p></div>
+        </div>
+        <div class="info">
+            <h3>Rosa Parks</h3>
+            <p>Figură centrală a mișcării pentru drepturile civile ale persoanelor de culoare, numită "mama mișcării pentru libertate".</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Mother_Teresa_1.jpg/960px-Mother_Teresa_1.jpg">
+            <div class="quote-overlay"><p>"Spread love everywhere you go."</p></div>
+        </div>
+        <div class="info">
+            <h3>Mother Teresa</h3>
+            <p>Călugăriță catolică de origine albaneză, cunoscută pentru dedicarea totală în ajutorarea celor mai săraci oameni din Calcutta.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section history">
+    <h2>Pionieri</h2>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small_%28cropped%29.jpg">
+            <div class="quote-overlay"><p>"The most difficult thing is the decision to act."</p></div>
+        </div>
+        <div class="info">
+            <h3>Amelia Earhart</h3>
+            <p>Prima femeie aviator care a zburat singură peste Oceanul Atlantic, fiind un simbol al curajului și aventurii.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Florence_Nightingale_%28H_Hering_NPG_x82368%29.jpg/960px-Florence_Nightingale_%28H_Hering_NPG_x82368%29.jpg">
+            <div class="quote-overlay"><p>"I attribute my success to this: I never gave any excuse."</p></div>
+        </div>
+        <div class="info">
+            <h3>Florence Nightingale</h3>
+            <p>Precursoarea serviciului sanitar modern și a asistenței medicale, devenind celebră prin îngrijirea soldaților răniți în Războiul Crimeii.</p>
+        </div>
+    </div>
+    <div class="person">
+        <div class="image-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oprah_Winfrey_2016.jpg/960px-Oprah_Winfrey_2016.jpg">
+            <div class="quote-overlay"><p>"Turn your wounds into wisdom."</p></div>
+        </div>
+        <div class="info">
+            <h3>Oprah Winfrey</h3>
+            <p>Realizatoare de televiziune și filantroapă. Este considerată una dintre cele mai influente femei din lume, pornind de la un început modest.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <h3>Realizat de:</h3>
+    <div class="team">
+        <span>Baiduca Lucas</span>
+        <span>Micu Vlad</span>
+        <span>Imbuzan Darius</span>
+    </div>
+</footer>
+
+</body>
+</html>
